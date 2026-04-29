@@ -1,0 +1,141 @@
+body,
+p,
+h2,
+figure {
+  margin: 0;
+}
+
+:root {
+  --layer-bg-color: #433f3eff;
+  --text-color: #d0c4ba;
+  --link-color: #d0c4ba;
+  --link-hover-color: #f54e56;
+  --fastfetch-title-color: #f54e56;
+  --fastfetch-key-color: #f54e56;
+  --markdown-header-bg-color: #9777e8ff;
+  --markdown-header-text-color: #e8d7ff;
+  --terminal-path-text-color: #e8d7ff;
+  --terminal-input-text-color: #9777e8;
+}
+
+body {
+  background-color: var(--layer-bg-color);
+  font-family: "JetBrains Mono", monospace;
+}
+
+main {
+  margin: 10px;
+}
+
+p,
+h2 {
+  font-style: normal;
+  font-size: 15.63px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+.terminal-cursor {
+  border-right: 10px solid white;
+  width: fit-content;
+  animation: blink 1s steps(1) infinite;
+  animation-delay: 1.4s;
+}
+
+.terminal-path {
+  color: var(--terminal-path-text-color);
+}
+
+.terminal-input {
+  color: var(--terminal-input-text-color);
+}
+
+.terminal-command {
+  color: var(--text-color);
+}
+
+.terminal-command-output {
+  margin: 12px 0;
+}
+
+.fastfetch-output {
+  display: flex;
+  flex-direction: column;
+  padding: 0 28px;
+  gap: 12px;
+}
+
+.fastfetch-output .fastfetch-logo {
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+}
+
+.fastfetch-title {
+  color: var(--fastfetch-title-color);
+}
+
+.fastfetch-key {
+  color: var(--fastfetch-key-color);
+}
+
+.markdown-output {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.markdown-output h2 {
+  background: var(--markdown-header-bg-color);
+  color: var(--markdown-header-text-color);
+  width: fit-content;
+  padding: 0 4px;
+}
+
+.fade {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.fade:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.fade:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+/* Animations */
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 600px) {
+  .fastfetch-output {
+    flex-direction: row;
+    padding: 0 28px;
+    gap: 28px;
+  }
+}
