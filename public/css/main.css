@@ -13,7 +13,7 @@ figure {
   --layer-bg-color: #433f3eff;
   --text-color: #d0c4ba;
   --link-color: #d0c4ba;
-  --link-hover-color: #f54e56;
+  --link-hover-color: #ff0000;
   --fastfetch-title-color: #f54e56;
   --fastfetch-key-color: #f54e56;
   --markdown-header-bg-color: #9777e8ff;
@@ -140,7 +140,7 @@ a.ls-filename:hover {
   border-right: 10px solid var(--terminal-cursor-color);
   width: fit-content;
   animation: blink-cursor 0.75s step-end infinite;
-  animation-delay: 2.5s;
+  animation-delay: 1.5s;
 }
 
 .typewriter {
@@ -174,7 +174,7 @@ article:nth-child(2) {
   }
 }
 
-article:nth-child(3) {
+/* article:nth-child(3) {
   .fade-before {
     animation-delay: 1.5s;
   }
@@ -184,10 +184,10 @@ article:nth-child(3) {
   .fade-after {
     animation-delay: 2.5s;
   }
-}
+} */
 
 article:last-child.fade-before {
-  animation-delay: 2.5s;
+  animation-delay: 1.5s;
 }
 
 /* Animations */
