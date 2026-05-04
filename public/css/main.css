@@ -6,6 +6,10 @@ figure {
 }
 
 :root {
+  --text-font-family: "JetBrains Mono", monospace;
+  --text-font-size: 15.63px;
+  --text-line-height: 1.2;
+  --text-transform: initial;
   --layer-bg-color: #433f3eff;
   --text-color: #d0c4ba;
   --link-color: #d0c4ba;
@@ -25,7 +29,7 @@ figure {
 
 body {
   background-color: var(--layer-bg-color);
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--text-font-family);
 }
 
 main {
@@ -36,10 +40,11 @@ p,
 h2,
 li {
   font-style: normal;
-  font-size: 15.63px;
+  font-size: var(--text-font-size);
   font-weight: 400;
-  line-height: 1.2;
+  line-height: var(--text-line-height);
   color: var(--text-color);
+  text-transform: var(--text-transform);
 }
 
 a {
